@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //선언
+        function add(x, y) {
+            return x + y;
+        }
+        // let result = add(10, 20);
+        // console.log(result);
+
+        // 표현식
+        let sub = function (x, y) {
+            return x - y;
+        }
+        //console.log(sub(10, 20));
+
+        // 화살표 함수=> return, {}생략 가능
+        let arrowSub = (x, y) =>  x - y;
+
+        // 콜백 함수(설명다시 17-7 42분)
+        function print(infomation) {
+            infomation();
+        }
+
+        function info() {
+            console.log('javascript');
+            
+        }
+        print(info);
+
+
+    </script>
+</body>
+</html>

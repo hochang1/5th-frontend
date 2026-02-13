@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+</head>
+<body>
+    <script>
+        // 메서드
+        const scores = [100, 3, 75, 52, 88];
+        console.log(scores);
+        
+        // toString() : 문자열 출력
+        // at()       : 인덱스로 출력
+        console.log(scores.at(-3));
+        // join()     : 문자열로 연결 후 출력
+        // console.log(scores.join('-'));
+        // pop()      : 마지막 요소 삭제
+        // console.log(scores.pop());
+        // push()     : 마지막에 요소 추가
+        // console.log(scores.push(88));
+        // shift()    : 첫번째 요소 제거
+        // unshift()  : 맨 앞에 추가
+        
+        // concat()   : 두 배열 하나의 배열로 합침
+        let numbers = [1, 2, 3, 4, 5];
+        //console.log(scores.concat(number));
+
+        // copyWithin() : 지정 인텍스에서 개수만큼 새로운 배열 복사
+        //console.log(numbers.copyWithin(0, 3, 5));
+        // flat()     : 배열을 일렬로 변경
+        let dim = [[1, 2], [3, [4, 5, 6]]];
+        console.log(dim.flat(2));
+
+        // splice()   : 지정 인덱스로 부터 삭제, 추가 기능
+        // slice()    : 지정 인덱스로부터 출력 기능 (원본의 영향 x)
+        let month = ['jan', 'march'];
+        console.log(month.splice(1, 1));    //(1, 0, 'feb') 삭제없으면(0) 추가
+        console.log(month);
+        
+        // indexOf()  : 지정 요소 인덱스값
+        
+        // includes() : 지정 요소 존재 여부
+
+        let points = [40, 500, 25, 11, 82];
+        // sort(함수) : 함수 -> 정렬  
+        // points.sort();
+        // console.log(points);    //앞에 숫자기준으만 정렬됨
+        
+        // points.sort((x, y) => x - y);   //람다식같은 표현
+        // console.log(points);        
+        
+        // forEach    : 함수 -> 내부 반복
+        //points.forEach(point => console.log(point));
+        
+        // map(함수)   : 함수 -> 내부 반복 이후 요소 반환
+        // let multiply = points.map(point => (point*0.1));
+        // console.log(multiply);        
+
+        // find(함수)  : 함수 -> 내부 반복 이후 요소 반환
+        // filter(함수) : 함수 -> 내부 반복 이후 조건에 맞는 요소 반환
+
+        // let foundPoint =points.find(point => point===25);
+        // console.log(foundPoint);        
+        
+
+
+        // reduce(함수) : 함수 -> 내부 반복 이후 누적 결과 반환
+        //let sum = points.reduce((acc, cur) => acc + cur, 0);
+        // console.log(sum);
+        
+        let avg = points.reduce((acc, cur, idx, arr) => {
+            acc += cur;
+            return idx === arr.length -1 ? acc / arr.length : acc;            
+        }, 0)                                                   
+        console.log(avg);                   // 먼 소리야 
+        
+        
+        
+    </script>
+</body>
+</html>

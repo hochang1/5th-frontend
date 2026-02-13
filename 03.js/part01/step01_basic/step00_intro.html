@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.getElementById('header').innerHTML = 'script header';  //작동안함 header가 바디에서 선언되어있어서
+    </script>
+    <!--async : HTML 파싱 + script 다운로드 => 다운로드 완료시, 즉시실행  (17-6 처음 설명 다시 듣기)-->   
+    <!-- defer : HTML 파싱 + script 다운로드 => HTML 파싱이 완료시, 실행 -->
+    <script defer src="/03.js/part01/step01_basic/js/script.js"></script> 
+    
+</head>
+<body>
+    <div id="header">header</div>
+    <div id="section">section</div>
+    <script>
+       
+         // 주석
+        let meyheight = 180;
+        let YourHeight = 180;   //파스칼 케이스
+
+    </script>
+    
+</body>
+</html>

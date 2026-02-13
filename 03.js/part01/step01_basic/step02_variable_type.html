@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 변수
+        var x;
+        x = 10;
+        var x = 10;
+        console.log(x);
+
+        let y;
+        y = 20;
+        // let y = 20; 다시 선언 불가능
+        console.log(y);
+
+        const z = 30;   //상수를 지정하므로 처음부터 값 지정해야됨
+        //z = 30; 이것도 재할당 안됨
+        console.log(z);
+
+        // 원시 타입
+        console.log(typeof 10.789);
+        console.log(typeof `10.789`);
+        console.log(typeof null);
+        console.log(typeof true);
+
+        let name;
+        console.log(typeof name);
+        // bigint
+        // symboll : 유일하게 중복을 허용하지 않음
+        const symboll = Symbol('gitgubApiKey');
+        console.log(typeof symboll);
+        Symbol.for('auth'); //고유값을 사용할때 쓰임
+
+
+    </script>
+</body>
+</html>
